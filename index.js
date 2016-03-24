@@ -60,7 +60,7 @@ var SortRow = React.createClass({
         height: layout.frameHeight,
         overflow: 'hidden',
         backgroundColor: 'transparent',
-        marginTop: layout.pageY - wrapperLayout.pageY //Account for top bar spacing
+        marginTop: layout.pageY - wrapperLayout.pageY - 70 //Account for top bar spacing
       }
     }
   },
@@ -226,7 +226,7 @@ var SortableListView = React.createClass({
   checkTargetElement() {
     let scrollValue = this.scrollValue;
     let moveY = this.moveY;
-    let targetPixel = scrollValue + moveY - this.wrapperLayout.pageY;
+    let targetPixel = scrollValue + moveY - this.wrapperLayout.pageY - 50;
     let i = 0;
     let x = 0;
     let row;
